@@ -13,6 +13,7 @@ SEASON_CHOICES = (
     (Season.ALL, _("All seasons")),
 )
 
+
 class SeasonField(models.CharField):
 
     def __init__(self, *args, **kwargs):

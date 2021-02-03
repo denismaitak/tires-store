@@ -3,7 +3,6 @@ from urllib.parse import urljoin
 from django.urls import reverse
 from django.conf import settings
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
-from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
@@ -88,7 +87,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_admin_change_url(self) -> str:
         """Get admin change URL.
 
-        Build full url (host + path) to standard Django admin page for
+        Build full URL (host + path) to standard Django admin page for
         object like:
 
             https://api.sitename.com/admin/users/user/234/

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Contractor, Balance
+from .models import Contractor
 
 __all__ = (
     'BalanceInline',
@@ -9,7 +9,7 @@ __all__ = (
 
 
 class BalanceInline(admin.StackedInline):
-    model = Contractor.tires.through
+    model = Contractor.tires.through  # models.Balance
     extra = 0
 
 
