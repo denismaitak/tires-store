@@ -12,6 +12,8 @@ decorator==4.4.2
     # via ipython
 django==3.1.6
     # via -r requirements/base.in
+flake8==3.8.4
+    # via -r requirements/development.in
 ipdb==0.13.4
     # via -r requirements/development.in
 ipython-genutils==0.2.0
@@ -22,6 +24,8 @@ ipython==7.20.0
     #   ipdb
 jedi==0.18.0
     # via ipython
+mccabe==0.6.1
+    # via flake8
 parso==0.8.1
     # via jedi
 pexpect==4.8.0
@@ -34,6 +38,10 @@ psycopg2-binary==2.8.6
     # via -r requirements/base.in
 ptyprocess==0.7.0
     # via pexpect
+pycodestyle==2.6.0
+    # via flake8
+pyflakes==2.2.0
+    # via flake8
 pygments==2.7.4
     # via ipython
 pytz==2021.1
