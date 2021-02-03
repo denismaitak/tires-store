@@ -8,6 +8,7 @@ __version__.py
 *.sublime-project
 *.sublime-workspace
 *.swp
+*.idea
 *~
 local.py
 media
