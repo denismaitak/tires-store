@@ -6,7 +6,7 @@ $ cd tires-store
 ```
 
 ```bash
-$ python3.7 -m venv .virtualenv
+$ python3.8 -m venv .virtualenv
 ```
 
 ```bash
