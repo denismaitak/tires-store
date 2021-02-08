@@ -6,14 +6,43 @@
 #
 asgiref==3.3.1
     # via django
+attrs==20.3.0
+    # via jsonschema
 backcall==0.2.0
     # via ipython
+bcrypt==3.2.0
+    # via paramiko
+cached-property==1.5.2
+    # via docker-compose
+certifi==2020.12.5
+    # via requests
+cffi==1.14.4
+    # via
+    #   bcrypt
+    #   cryptography
+    #   pynacl
+chardet==4.0.0
+    # via requests
+cryptography==3.4.1
+    # via paramiko
 decorator==4.4.2
     # via ipython
+distro==1.5.0
+    # via docker-compose
 django==3.1.6
     # via -r ./requirements/base.in
+docker-compose==1.28.2
+    # via -r ./requirements/development.in
+docker[ssh]==4.4.1
+    # via docker-compose
+dockerpty==0.4.1
+    # via docker-compose
+docopt==0.6.2
+    # via docker-compose
 flake8==3.8.4
     # via -r ./requirements/development.in
+idna==2.10
+    # via requests
 invoke==1.5.0
     # via -r ./requirements/base.in
 ipdb==0.13.4
@@ -26,8 +55,12 @@ ipython==7.20.0
     #   ipdb
 jedi==0.18.0
     # via ipython
+jsonschema==3.2.0
+    # via docker-compose
 mccabe==0.6.1
     # via flake8
+paramiko==2.7.2
+    # via docker
 parso==0.8.1
     # via jedi
 pexpect==4.8.0
@@ -42,18 +75,54 @@ ptyprocess==0.7.0
     # via pexpect
 pycodestyle==2.6.0
     # via flake8
+pycparser==2.20
+    # via cffi
 pyflakes==2.2.0
     # via flake8
 pygments==2.7.4
     # via ipython
+pynacl==1.4.0
+    # via paramiko
+pyrsistent==0.17.3
+    # via jsonschema
+python-dotenv==0.15.0
+    # via docker-compose
 pytz==2021.1
     # via django
+pyyaml==5.4.1
+    # via docker-compose
+requests==2.25.1
+    # via
+    #   docker
+    #   docker-compose
+semantic-version==2.8.5
+    # via setuptools-rust
+setuptools-rust==0.11.6
+    # via cryptography
+six==1.15.0
+    # via
+    #   bcrypt
+    #   docker
+    #   dockerpty
+    #   jsonschema
+    #   pynacl
+    #   websocket-client
 sqlparse==0.4.1
     # via django
+texttable==1.6.3
+    # via docker-compose
+toml==0.10.2
+    # via setuptools-rust
 traitlets==5.0.5
     # via ipython
+urllib3==1.26.3
+    # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
+websocket-client==0.57.0
+    # via
+    #   docker
+    #   docker-compose
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

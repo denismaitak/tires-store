@@ -3,6 +3,8 @@ Example of Django project
 
 ## Run the project
 
+### Create virtual environment
+
 ```bash
 $ cd tires-store
 ```
@@ -15,13 +17,25 @@ $ python3.8 -m venv .virtualenv
 $ source .virtualenv/bin/activate
 ```
 
+### Install requirements
+
 ```bash
 $ pip install -r requirements/development.txt
 ```
 
+### Run Docker-containers
+
 ```bash
 $ docker-compose up -d postgres
 ```
+
+### Set up local settings file
+
+```bash
+$ cp config/settings/local.py.template config/settings/local.py
+```
+
+### Run Django
 
 ```bash
 $ ./manage.py migrate
