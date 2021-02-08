@@ -3,3 +3,4 @@
 ipython
 ipdb
 flake8
+docker-compose
