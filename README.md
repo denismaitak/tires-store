@@ -1,7 +1,7 @@
 # tires-store
 Example of Django project
 
-## Run project
+## Run the project
 
 ```bash
 $ cd tires-store
@@ -35,7 +35,7 @@ $ ./manage.py createsuperuser
 $ ./manage.py runserver
 ```
 
-## Set up GIT-hooks if you need it.
+## Set up GIT-hooks if you need it
 
 ```bash
 $ inv copygithooks
