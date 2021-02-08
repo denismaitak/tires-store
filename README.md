@@ -1,6 +1,8 @@
 # tires-store
 Example of Django project
 
+## Run project
+
 ```bash
 $ cd tires-store
 ```
@@ -31,6 +33,12 @@ $ ./manage.py createsuperuser
 
 ```bash
 $ ./manage.py runserver
+```
+
+## Set up GIT-hooks if you need it.
+
+```bash
+$ inv copygithooks
 ```
 
 Get fun!
