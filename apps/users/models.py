@@ -37,16 +37,16 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     first_name = models.CharField(
         max_length=255,
-        verbose_name=_("First name")
+        verbose_name=_("First name"),
     )
     last_name = models.CharField(
         max_length=255,
-        verbose_name=_("Last name")
+        verbose_name=_("Last name"),
     )
     email = models.EmailField(
         max_length=255,
         unique=True,
-        verbose_name=_("Email")
+        verbose_name=_("Email"),
     )
     is_active = models.BooleanField(
         default=True,
