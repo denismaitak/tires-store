@@ -14,11 +14,11 @@ __all__ = (
 class Manufacturer(models.Model):
     name = models.CharField(
         max_length=255,
-        verbose_name=_("Name")
+        verbose_name=_("Name"),
     )
     description = models.TextField(
         blank=True,
-        verbose_name=_("Description")
+        verbose_name=_("Description"),
     )
 
     def __str__(self):
@@ -87,7 +87,7 @@ class Tire(models.Model):
     )
     description = models.TextField(
         blank=True,
-        verbose_name=_("Description")
+        verbose_name=_("Description"),
     )
     season = SeasonField(
         verbose_name=_("Season"),
