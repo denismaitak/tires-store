@@ -67,6 +67,8 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
+pillow==8.1.0
+    # via -r ./requirements/base.in
 prompt-toolkit==3.0.14
     # via ipython
 psycopg2-binary==2.8.6

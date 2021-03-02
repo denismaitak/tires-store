@@ -132,3 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 AUTH_USER_MODEL = 'users.User'
+
+
+# Media files paths config
+TIRE_IMAGE_STORING_PATH_TEMPLATE = 'tires/{filename}'
