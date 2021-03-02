@@ -1,5 +1,8 @@
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
+from apps.utils.files import get_random_filename
 
 from .fields import SeasonField
 from .managers import TireManager
@@ -9,6 +12,12 @@ __all__ = (
     'Size',
     'Tire',
 )
+
+
+def upload_tire_image_to(_, filename: str) -> str:
+    return settings.TIRE_IMAGE_STORING_PATH_TEMPLATE.format(
+        filename=get_random_filename(filename),
+    )
 
 
 class Manufacturer(models.Model):
@@ -92,6 +101,13 @@ class Tire(models.Model):
     season = SeasonField(
         verbose_name=_("Season"),
         help_text=_("Optimal season for a tire using."),
+    )
+    image = models.ImageField(
+        verbose_name=_("Image"),
+        null=True,
+        blank=True,
+        upload_to=upload_tire_image_to,
+        max_length=200,
     )
 
     objects = TireManager()
