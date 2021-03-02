@@ -56,3 +56,16 @@ $ inv copygithooks
 ```
 
 Get fun!
+
+
+## Run Celery
+
+Full workflow requires worker and broker
+
+```bash
+$ celery --app config.celery:app worker -l info
+```
+
+```bash
+$ celery --app config.celery:app beat -l info -S django
+```
