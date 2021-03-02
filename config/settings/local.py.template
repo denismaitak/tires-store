@@ -1,1 +1,56 @@
 from .base import *
+
+from os.path import dirname
+
+from .base import *
+
+ENVIRONMENT = 'local'
+PROJECT_DIR = dirname(BASE_DIR)
+
+ADMINS = [
+    ('Admin', 'admin@localhost'),
+]
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'skip_fast_queries': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: float(r.args[0]) > 0.002,
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': f'{PROJECT_DIR}/.logs/debug.log',
+            'filters': ['skip_fast_queries'],
+        },
+        'mail_admins': {
+            'level': 'DEBUG',
+            'class': 'django.utils.log.AdminEmailHandler',
+        },
+    },
+    'loggers': {
+        'django.server': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'django.db.backends': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'filters': ['skip_fast_queries'],
+        },
+    },
+}
+
+
+USE_CELERY = True
+CELERY_TASK_DEFAULT_QUEUE = f'tires-store-{ENVIRONMENT}'
+CELERY_BROKER = 'amqp://guest@rabbitmq'
+CELERY_BACKEND = 'redis://redis'
+
