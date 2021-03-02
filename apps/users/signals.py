@@ -13,7 +13,7 @@ __all__ = (
 def send_notifications_to_created_user(*, instance, created, **_):
     """Send a notification to created user."""
 
-    # if not created:
-    #     return
+    if not created:
+        return
 
     tasks.send_notification_to_created_user(instance.id)
