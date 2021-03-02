@@ -26,8 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django_celery_beat',
-
     'apps.users',
     'apps.tires',
     'apps.stock',
@@ -138,10 +136,3 @@ AUTH_USER_MODEL = 'users.User'
 
 # Media files paths config
 TIRE_IMAGE_STORING_PATH_TEMPLATE = 'tires/{filename}'
-
-
-# Celery
-USE_CELERY = True
-CELERY_TASK_DEFAULT_QUEUE = f'tires-store'
-CELERY_BROKER = 'amqp://guest@rabbitmq'
-CELERY_BACKEND = 'redis://redis/'
