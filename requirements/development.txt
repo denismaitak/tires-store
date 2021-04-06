@@ -30,9 +30,9 @@ decorator==4.4.2
 distro==1.5.0
     # via docker-compose
 django==3.1.6
-    # via -r ./requirements/base.in
+    # via -r base.in
 docker-compose==1.28.2
-    # via -r ./requirements/development.in
+    # via -r development.in
 docker[ssh]==4.4.1
     # via docker-compose
 dockerpty==0.4.1
@@ -40,18 +40,18 @@ dockerpty==0.4.1
 docopt==0.6.2
     # via docker-compose
 flake8==3.8.4
-    # via -r ./requirements/development.in
+    # via -r development.in
 idna==2.10
     # via requests
 invoke==1.5.0
-    # via -r ./requirements/base.in
+    # via -r base.in
 ipdb==0.13.4
-    # via -r ./requirements/development.in
+    # via -r development.in
 ipython-genutils==0.2.0
     # via traitlets
 ipython==7.20.0
     # via
-    #   -r ./requirements/development.in
+    #   -r development.in
     #   ipdb
 jedi==0.18.0
     # via ipython
@@ -70,7 +70,7 @@ pickleshare==0.7.5
 prompt-toolkit==3.0.14
     # via ipython
 psycopg2-binary==2.8.6
-    # via -r ./requirements/base.in
+    # via -r base.in
 ptyprocess==0.7.0
     # via pexpect
 pycodestyle==2.6.0
@@ -115,7 +115,7 @@ toml==0.10.2
     # via setuptools-rust
 traitlets==5.0.5
     # via ipython
-urllib3==1.26.3
+urllib3==1.26.4
     # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
