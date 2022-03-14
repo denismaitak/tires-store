@@ -109,7 +109,7 @@ six==1.15.0
     #   jsonschema
     #   pynacl
     #   websocket-client
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via django
 texttable==1.6.3
     # via docker-compose
