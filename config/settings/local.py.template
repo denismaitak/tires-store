@@ -51,4 +51,3 @@ USE_CELERY = True
 CELERY_TASK_DEFAULT_QUEUE = f'tires-store-{ENVIRONMENT}'
 CELERY_BROKER = 'amqp://guest@rabbitmq'
 CELERY_BACKEND = 'redis://redis'
-
