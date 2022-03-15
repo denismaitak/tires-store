@@ -20,7 +20,7 @@ billiard==3.6.4.0
     # via celery
 celery==5.2.3
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   django-celery-beat
 certifi==2021.10.8
     # via requests
@@ -53,17 +53,17 @@ distro==1.7.0
     # via docker-compose
 django==3.2.12
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   django-celery-beat
     #   django-timezone-field
 django-celery-beat==2.2.1
-    # via -r requirements/base.in
+    # via -r base.in
 django-timezone-field==4.2.3
     # via django-celery-beat
 docker[ssh]==5.0.3
     # via docker-compose
 docker-compose==1.29.2
-    # via -r requirements/development.in
+    # via -r development.in
 dockerpty==0.4.1
     # via docker-compose
 docopt==0.6.2
@@ -71,16 +71,16 @@ docopt==0.6.2
 executing==0.8.3
     # via stack-data
 flake8==4.0.1
-    # via -r requirements/development.in
+    # via -r development.in
 idna==3.3
     # via requests
 invoke==1.5.0
-    # via -r requirements/base.in
+    # via -r base.in
 ipdb==0.13.9
-    # via -r requirements/development.in
+    # via -r development.in
 ipython==8.1.1
     # via
-    #   -r requirements/development.in
+    #   -r development.in
     #   ipdb
 jedi==0.18.1
     # via ipython
@@ -100,14 +100,14 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-pillow==8.1.0
-    # via -r requirements/base.in
+pillow==9.0.1
+    # via -r base.in
 prompt-toolkit==3.0.28
     # via
     #   click-repl
     #   ipython
 psycopg2-binary==2.8.6
-    # via -r requirements/base.in
+    # via -r base.in
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
@@ -138,7 +138,7 @@ pytz==2021.3
 pyyaml==5.4.1
     # via docker-compose
 redis==3.5.3
-    # via -r requirements/base.in
+    # via -r base.in
 requests==2.27.1
     # via
     #   docker
