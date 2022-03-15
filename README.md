@@ -55,9 +55,6 @@ $ ./manage.py runserver
 $ inv copygithooks
 ```
 
-Get fun!
-
-
 ## Run Celery
 
 Full workflow requires worker and broker
@@ -69,3 +66,5 @@ $ celery --app config.celery:app worker -l info
 ```bash
 $ celery --app config.celery:app beat -l info -S django
 ```
+
+Get fun!
