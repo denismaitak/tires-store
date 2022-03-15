@@ -1,8 +1,8 @@
-Django==3.1.6
+Django==3.2.12
+Pillow==8.1.0
 psycopg2-binary==2.8.6
 invoke==1.5.0
-Pillow
 
-celery==5.0.5
-django-celery-beat==2.2.0
+celery==5.2.3
+django-celery-beat==2.2.1
 redis==3.5.3

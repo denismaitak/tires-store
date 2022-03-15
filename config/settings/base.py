@@ -138,3 +138,7 @@ AUTH_USER_MODEL = 'users.User'
 
 # Media files paths config
 TIRE_IMAGE_STORING_PATH_TEMPLATE = 'tires/{filename}'
+
+
+# Migrated to Django 3.2.12
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
