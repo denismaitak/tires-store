@@ -1,5 +1,8 @@
+from django.conf import settings
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
+from apps.utils.files import get_random_filename
 
 from .fields import SeasonField
 from .managers import TireManager
@@ -11,14 +14,20 @@ __all__ = (
 )
 
 
+def upload_tire_image_to(_, filename: str) -> str:
+    return settings.TIRE_IMAGE_STORING_PATH_TEMPLATE.format(
+        filename=get_random_filename(filename),
+    )
+
+
 class Manufacturer(models.Model):
     name = models.CharField(
         max_length=255,
-        verbose_name=_("Name")
+        verbose_name=_("Name"),
     )
     description = models.TextField(
         blank=True,
-        verbose_name=_("Description")
+        verbose_name=_("Description"),
     )
 
     def __str__(self):
@@ -35,9 +44,11 @@ class Size(models.Model):
         (175, "175"),
         (185, "185"),
         (205, "205"),
+        (265, "265"),
     )
     HEIGHT_CHOICES = (
         (60, "60"),
+        (65, "65"),
         (70, "70"),
         (80, "80"),
     )
@@ -45,6 +56,7 @@ class Size(models.Model):
         (13, "13"),
         (14, "14"),
         (15, "15"),
+        (17, "17"),
     )
 
     width = models.IntegerField(
@@ -87,11 +99,18 @@ class Tire(models.Model):
     )
     description = models.TextField(
         blank=True,
-        verbose_name=_("Description")
+        verbose_name=_("Description"),
     )
     season = SeasonField(
         verbose_name=_("Season"),
         help_text=_("Optimal season for a tire using."),
+    )
+    image = models.ImageField(
+        verbose_name=_("Image"),
+        null=True,
+        blank=True,
+        upload_to=upload_tire_image_to,
+        max_length=200,
     )
 
     objects = TireManager()
